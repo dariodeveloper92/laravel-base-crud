@@ -45,10 +45,12 @@ class ComicController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Comic $comic)
     {
-        $dettaglio_comic = Comic::find($id);
-        echo $dettaglio_comic['description'];
+        //dd($comic);
+        return view('comics.show', compact('comic'));
+        //$dettaglio_comic = Comic::find($comic);
+        //echo $dettaglio_comic['description'];
     }
 
     /**
