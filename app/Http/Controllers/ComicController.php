@@ -37,7 +37,8 @@ class ComicController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
-        dd($data['title']);
+        //dd($data['title']);
+        //dd($data);
 
         $request->validate([
             'title' => 'required|unique:comics|max:50',
@@ -52,6 +53,7 @@ class ComicController extends Controller
         // $new_comic->type = $data['type'];
         // $new_comic->price = $data['price'];
         $new_comic->fill($data);
+        $new_comic->thumb = '';
         $new_comic->save();
 
         return redirect()->route('comics.index');

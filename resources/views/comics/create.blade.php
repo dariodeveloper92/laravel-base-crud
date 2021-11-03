@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-12">
                 {{-- messaggio di errore --}}
-                @if ($errors->any());
+                @if ($errors->any())
                     <div class="alert alert-danger">
                         <ul>
                             @foreach ($errors->all() as $error)
