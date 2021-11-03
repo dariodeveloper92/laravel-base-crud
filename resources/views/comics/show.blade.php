@@ -9,11 +9,11 @@
                <ul>
                     <li> Title: {{ $comic['title'] }} </li>
                     <li> <img src="{{ $comic['thumb'] }} " alt=""></li>
-                   <li><p> Description: {!! $comic['description'] !!} </p></li>
-                   <li><h4>Series: {{ $comic['series'] }}</h4></li>
-                   <li><h4> Sale date: {{ $comic['sale_date'] }} </h4></li>
-                   <li><h4> Type: {{ $comic['type'] }} </h4></li>
-                   <li><h4> Price: {{ $comic['price'] }} </h4></li>
+                    <li><p> Description: {!! $comic['description'] !!} </p></li>
+                    <li><h4>Series: {{ $comic['series'] }}</h4></li>
+                    <li><h4> Sale date: {{ $comic['sale_date'] }} </h4></li>
+                    <li><h4> Type: {{ $comic['type'] }} </h4></li>
+                    <li><h4> Price: {{ $comic['price'] }} </h4></li>
                </ul>
             </div>
         </div>

@@ -15,6 +15,10 @@
                 <input type="text" name="description" class="form-control" id="description" placeholder="Enter comic description">
             </div>
             <div class="form-group  mb-3">
+                <label for="thumb">thumb</label>
+                <input type="text" name="thumb" class="form-control" id="thumb" placeholder="Enter series comic">
+            </div>
+            <div class="form-group  mb-3">
                 <label for="series">Series</label>
                 <input type="text" name="series" class="form-control" id="series" placeholder="Enter series comic">
             </div>
