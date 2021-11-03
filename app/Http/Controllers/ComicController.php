@@ -38,6 +38,11 @@ class ComicController extends Controller
     {
         $data = $request->all();
         dd($data['title']);
+
+        $request->validate([
+            'title' => 'required|unique:comics|max:50',
+            'type' => 'required|max:20',
+        ]);
         
 
         $new_comic = new Comic();
