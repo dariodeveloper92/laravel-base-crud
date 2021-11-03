@@ -12,12 +12,14 @@
             </div>
             <div class="form-group mb-3">
                 <label for="description">Description</label>
-                <input value="{{ $comic['description'] }}" type="text" name="description" class="form-control" id="description" placeholder="Enter comic description">
+                {{-- <input value="{{ $comic['description'] }}" type="text" name="description" class="form-control" id="description" placeholder="Enter comic description"> --}}
+
+                <textarea class="form-control" name="description" id="description">{!! $comic['description'] !!}</textarea>
             </div>
-            <div class="form-group  mb-3">
+            {{-- <div class="form-group  mb-3">
                 <label for="thumb">thumb</label>
                 <input value="{{ $comic['thumb'] }}" type="text" name="thumb" class="form-control" id="thumb" placeholder="Enter series comic">
-            </div>
+            </div> --}}
             <div class="form-group  mb-3">
                 <label for="series">Series</label>
                 <input value="{{ $comic['titseriesle'] }}" type="text" name="series" class="form-control" id="series" placeholder="Enter series comic">
@@ -28,7 +30,12 @@
             </div>
             <div class="form-group  mb-3">
                 <label for="type">Type</label>
-                <input value="{{ $comic['type'] }}" type="text" name="type" class="form-control" id="type" placeholder="Enter price comic">
+                {{-- <input value="{{ $comic['type'] }}" type="text" name="type" class="form-control" id="type" placeholder="Enter price comic"> --}}
+                <select class="form-control" name="type" id="type">
+                    <option value="">-- Seleziona --</option>
+                    <option value="comic book" {{ $comic['type'] == 'comic book' ? 'selected' : NULL}}> Comic book </option>
+                    <option value="graphic novel" {{ $comic['type'] == 'graphic novel' ? 'selected' : NULL}}> Graphic novel </option>
+                </select>
             </div>
             <div class="form-group  mb-3">
                 <label for="price">Price</label>

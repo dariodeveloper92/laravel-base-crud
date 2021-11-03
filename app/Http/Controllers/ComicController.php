@@ -44,7 +44,6 @@ class ComicController extends Controller
             'type' => 'required|max:20',
         ]);
         
-
         $new_comic = new Comic();
         // $new_comic->title = $data['title'];
         // $new_comic->description = $data['description'];
