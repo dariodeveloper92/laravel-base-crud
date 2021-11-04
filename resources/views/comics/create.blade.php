@@ -32,8 +32,10 @@
                     <div class="form-group mb-3">
                         <label for="description">Description</label>
                         {{-- <input type="text" name="description" class="form-control" id="description" placeholder="Enter comic description"> --}}
-
-                        <textarea class="form-control" name="description" id="description"></textarea>
+                        <textarea class="form-control" name="description" id="description">
+                            {{-- old mantiene il vecchio dato --}}
+                            {{Request::old('description')}}
+                        </textarea>
                     </div>
                     {{-- <div class="form-group  mb-3">
                         <label for="thumb">thumb</label>

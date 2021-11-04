@@ -5,7 +5,12 @@
         <div class="row">
             <div class="col-12">
                 <h1 class="mt-4 mb-4">Tutte i miei Fumetti</h1>
-                <table class="table">
+                @if (session('status')) {{-- messaggio di avvenuta cancellazione --}}
+                    <div class="alert alert-succes">
+                        {{session('status') }}
+                    </div>
+                @endif
+                <table class="table table-striped">
                     <thead>
                         <tr>
                             <th scope="col">#</th>
